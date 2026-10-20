@@ -1,11 +1,7 @@
-const path = require("path");
 const { createWorker } = require("tesseract.js");
+const { tessdataCachePath } = require("./paths");
 
 let workerPromise = null;
-
-function assetsDir() {
-  return path.resolve(__dirname, "../../assets");
-}
 
 async function getWorker() {
   if (!workerPromise) {
@@ -14,7 +10,7 @@ async function getWorker() {
       // nên langPath dạng D:\... bị fetch như URL → "Only absolute URLs are supported".
       // Cách đúng: để eng.traineddata ở cachePath, đọc bằng fs (không fetch).
       const worker = await createWorker("eng", 1, {
-        cachePath: assetsDir(),
+        cachePath: tessdataCachePath(),
         cacheMethod: "readOnly",
         gzip: false,
         logger: () => {},

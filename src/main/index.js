@@ -13,6 +13,7 @@ const { captureScreen } = require("./capture");
 const { ocrImageBuffer } = require("./ocr");
 const { translate } = require("../shared/translate");
 const { DEFAULTS } = require("../shared/settings");
+const { iconPath } = require("./paths");
 
 /** @type {BrowserWindow | null} */
 let overlayWin = null;
@@ -22,10 +23,6 @@ let resultWin = null;
 let tray = null;
 
 const settings = { ...DEFAULTS };
-
-function iconPath() {
-  return path.join(__dirname, "../../assets/icon.png");
-}
 
 function createTray() {
   const img = nativeImage.createFromPath(iconPath());
