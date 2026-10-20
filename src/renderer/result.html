@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kết quả OCR</title>
+    <link rel="stylesheet" href="result.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Đã chụp vùng chọn</h1>
+      <button type="button" id="btnClose" class="ghost">Đóng</button>
+    </header>
+    <img id="preview" alt="" hidden />
+    <p id="status" class="status"></p>
+    <label>
+      <span>Chữ OCR</span>
+      <textarea id="text" rows="5" placeholder="…"></textarea>
+    </label>
+    <div id="translated" class="translated"></div>
+    <div class="actions">
+      <button type="button" id="btnRetry">Dịch lại</button>
+      <button type="button" id="btnCopy">Sao chép dịch</button>
+    </div>
+    <script src="result.js"></script>
+  </body>
+</html>

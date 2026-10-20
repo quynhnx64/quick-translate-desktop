@@ -1,0 +1,21 @@
+{
+  "name": "quick-translate-desktop",
+  "version": "0.1.0",
+  "description": "Windows overlay: chụp vùng màn hình → OCR → dịch (tái dùng logic Quick Translate extension)",
+  "main": "src/main/index.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "keywords": ["ocr", "translate", "electron", "windows"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "screenshot-desktop": "^1.15.1",
+    "tesseract.js": "^5.1.1"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0"
+  }
+}
